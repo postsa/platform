@@ -55,7 +55,7 @@ jobs:
           fi
       - name: Push
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
         run: |
           git config user.name "GitHub Action"
           git config user.email "github-actions[bot]@users.noreply.github.com"
