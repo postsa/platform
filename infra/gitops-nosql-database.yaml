@@ -1,7 +1,0 @@
-apiVersion: database.example.com/v1alpha1
-kind: NoSQLClaim
-metadata:
-  name: argocd-nosql-database
-  namespace: infra
-spec:
-  location: "US"
