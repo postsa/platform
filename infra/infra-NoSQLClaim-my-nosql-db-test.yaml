@@ -1,0 +1,7 @@
+apiVersion: database.example.com/v1alpha1
+kind: NoSQLClaim
+metadata:
+  name: my-nosql-db-test
+  namespace: infra
+spec:
+  location: US
