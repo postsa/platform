@@ -20,3 +20,26 @@ spec:
       selfHeal: true
       prune: true
       allowEmpty: true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: spec
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: production
+  source:
+    repoURL: https://github.com/postsa/platform
+    targetRevision: HEAD
+    path: spec
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: crossplane-system
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+      allowEmpty: true
+
