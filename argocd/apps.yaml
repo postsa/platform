@@ -34,7 +34,8 @@ spec:
     repoURL: https://github.com/postsa/platform
     targetRevision: HEAD
     path: spec
-    recursive: true
+    directory:
+      recurse: true
   destination:
     server: https://kubernetes.default.svc
     namespace: crossplane-spec
